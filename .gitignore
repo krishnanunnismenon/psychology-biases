@@ -1,0 +1,14 @@
+# Ignore node_modules in both client and server
+client/node_modules/
+server/node_modules/
+
+# Ignore environment variables
+client/.env
+server/.env
+
+# Ignore build files
+client/.next/
+server/dist/
+
+# Logs
+*.log
