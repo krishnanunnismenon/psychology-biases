@@ -1,6 +1,8 @@
-import Link from "next/link";
-
+'use client'
+import { useAuth } from "@/context/AuthContext";
 export default function LoginPage() {
+
+  const { user, signInWithGoogle, logout } = useAuth();
     return (
       <div className="flex h-screen">
         {/* Left Side - Image & Branding */}
@@ -59,11 +61,11 @@ export default function LoginPage() {
             </div>
   
             {/* Login Button */}
-            <Link href="/biases">
-            <button  className="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600">
+            
+            <button onClick={signInWithGoogle} className="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600">
               Login Account
             </button>
-            </Link>
+            
   
             {/* Signup Link */}
             <p className="text-sm text-gray-600 mt-4 text-center">

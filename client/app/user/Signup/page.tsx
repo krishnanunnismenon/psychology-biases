@@ -1,4 +1,8 @@
+'use client'
+import { useAuth } from "@/context/AuthContext";
+
 export default function SignupPage() {
+  const { user, signInWithGoogle, logout } = useAuth();
     return (
       <div className="flex h-screen">
         {/* Left Side - Image & Branding */}
@@ -78,7 +82,7 @@ export default function SignupPage() {
             <div className="text-center my-4 text-gray-500">OR</div>
   
             {/* Google Signup Button */}
-            <button className="w-full flex items-center justify-center border rounded-md py-2 hover:bg-gray-100">
+            <button onClick={signInWithGoogle} className="w-full flex items-center justify-center border rounded-md py-2 hover:bg-gray-100">
               <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" className="w-5 h-5 mr-2" />
               CONTINUE WITH <span className="font-bold text-red-500 ml-1">Google</span>
             </button>

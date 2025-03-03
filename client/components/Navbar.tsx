@@ -24,7 +24,7 @@ const Navbar = () => {
               Home
             </Link>
             <Link 
-              href="/journey/intro" 
+              href="/journey/blurred" 
               className={`${pathname.startsWith("/journey") ? "text-primary font-medium" : "text-gray-600 hover:text-primary"}`}
             >
               Journey
