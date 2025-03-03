@@ -17,6 +17,7 @@ type AuthContextType = {
   loading: boolean;
   signInWithGoogle: () => Promise<void>;
   logout: () => Promise<void>;
+  
 };
 
 const AuthContext = createContext<AuthContextType | null>(null);

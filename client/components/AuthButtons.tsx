@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useAuth } from "@/context/AuthContext";
 
 const AuthButtons = () => {
-  const { user, signIn, signUp, logout } = useAuth();
+  const { user,  logout } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState("");
@@ -16,11 +16,7 @@ const AuthButtons = () => {
     setError("");
     
     try {
-      if (isLogin) {
-        await signIn(email, password);
-      } else {
-        await signUp(email, password);
-      }
+      
       setShowAuthModal(false);
     } catch (error: any) {
       setError(error.message);
