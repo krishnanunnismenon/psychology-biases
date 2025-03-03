@@ -22,7 +22,7 @@ export default function Home() {
           and interact with the world.
         </p>
         
-        <Link href="/journey/question">
+        <Link href="/journey/blurred">
           <button className="btn-primary uppercase">
             START JOURNEY
           </button>
