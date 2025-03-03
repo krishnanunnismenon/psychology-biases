@@ -3,19 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+.btn-primary {
+  @apply bg-primary text-white font-bold py-2 px-6 rounded-full hover:opacity-90 transition-opacity;
+}
+
+.btn-secondary {
+  @apply bg-white border border-gray-300 text-gray-700 font-bold py-2 px-6 rounded-full hover:bg-gray-100 transition-colors;
+}
+
+.card {
+  @apply bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow;
+}
+
+.progress-bar {
+  @apply bg-primary text-white text-xs font-medium text-center p-0.5 leading-none rounded-full;
 }
