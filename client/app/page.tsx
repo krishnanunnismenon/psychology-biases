@@ -5,7 +5,7 @@ export default function Home() {
     <div className="container mx-auto px-4 py-12 flex flex-col md:flex-row items-center">
       <div className="md:w-1/2 mb-8 md:mb-0">
         <h1 className="text-3xl md:text-4xl font-bold mb-2 text-primary">
-          Hashim
+          Master Your Mind,
         </h1>
         <h2 className="text-2xl md:text-3xl font-bold mb-6">
           Make Smarter Decisions!
