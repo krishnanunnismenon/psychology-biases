@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { AuthProvider } from "@/context/AuthContext";
+import { ProgressProvider } from "@/context/ProgressContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,8 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
-        <main className="min-h-screen bg-white">{children}</main>
+        <AuthProvider>
+          <ProgressProvider>
+            <Navbar />
+            <main className="min-h-screen bg-white">{children}</main>
+          </ProgressProvider>
+        </AuthProvider>
       </body>
     </html>
   );
