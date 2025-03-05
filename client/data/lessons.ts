@@ -4,7 +4,7 @@ export const lessons: Lesson[] = [
   {
     id: "intro",
     title: "Introduction",
-    path: "/journey/intro",
+    path: "/journey/blurred",
     order: 1
   },
   {
