@@ -7,6 +7,7 @@ import { useAuth } from "@/context/AuthContext";
 
 const Navbar = () => {
   const pathname = usePathname();
+  
   const { user, signInWithGoogle, logout } = useAuth();
 
   return (
@@ -14,7 +15,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-2">
           <Link href="/" className="flex items-center">
-            <span className="text-xl font-bold text-primary">🧠 Cognitive Biases</span>
+            <span className="text-xl font-bold text-primary"> Cognitive Biases</span>
           </Link>
           <div className="hidden md:flex space-x-8 items-center">
             <Link 
@@ -23,12 +24,16 @@ const Navbar = () => {
             >
               Home
             </Link>
-            <Link 
+            {!user && (
+              <Link 
               href="/journey/blurred" 
               className={`${pathname.startsWith("/journey") ? "text-primary font-medium" : "text-gray-600 hover:text-primary"}`}
             >
               Journey
             </Link>
+            )}
+            
+
             <Link 
               href="/biases" 
               className={`${pathname.startsWith("/biases") ? "text-primary font-medium" : "text-gray-600 hover:text-primary"}`}
