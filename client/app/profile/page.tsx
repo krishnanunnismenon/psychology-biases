@@ -82,11 +82,7 @@ export default function ProfilePage() {
         </div>
         
         <div className="flex justify-center">
-<<<<<<< HEAD
           <Link href="/journey/blurred">
-=======
-          <Link href="/journey/intro">
->>>>>>> 7a3e7c4 (third commit)
             <button className="btn-primary mr-4">
               CONTINUE JOURNEY
             </button>

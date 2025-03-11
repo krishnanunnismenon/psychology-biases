@@ -4,11 +4,7 @@ export const lessons: Lesson[] = [
   {
     id: "intro",
     title: "Introduction",
-<<<<<<< HEAD
     path: "/journey/blurred",
-=======
-    path: "/journey/intro",
->>>>>>> 7a3e7c4 (third commit)
     order: 1
   },
   {

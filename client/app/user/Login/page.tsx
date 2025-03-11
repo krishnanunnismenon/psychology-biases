@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-'use client'
-import { useAuth } from "@/context/AuthContext";
-export default function LoginPage() {
-
-  const { user, signInWithGoogle, logout } = useAuth();
-    return (
-      <div className="flex h-screen">
-        {/* Left Side - Image & Branding */}
-        <div className="w-1/2 relative hidden lg:block">
-          <img
-            src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-            alt="Watch Vault"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute top-8 left-8 text-white text-2xl font-bold">
-            Cognitive<span className="text-green-500">Biasis</span>
-          </div>
-=======
 "use client";
 import { useAuth } from "@/context/AuthContext";
 import { useState } from "react";
@@ -67,7 +48,6 @@ export default function LoginPage() {
         />
         <div className="absolute top-8 left-8 text-white text-2xl font-bold">
           Cognitive<span className="text-green-500">Biases</span>
->>>>>>> 7a3e7c4 (third commit)
         </div>
       </div>
 
@@ -124,21 +104,6 @@ export default function LoginPage() {
             </div>
 
             {/* Login Button */}
-<<<<<<< HEAD
-            
-            <button onClick={signInWithGoogle} className="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600">
-              Login Account
-            </button>
-            
-  
-            {/* Signup Link */}
-            <p className="text-sm text-gray-600 mt-4 text-center">
-              Don't have an account?{" "}
-              <a href="/user/Signup" className="text-green-500 hover:underline">
-                Sign up here
-              </a>
-            </p>
-=======
             <button
               type="submit"
               className="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600"
@@ -153,7 +118,6 @@ export default function LoginPage() {
             <div className="flex-1 h-px bg-gray-300"></div>
             <span className="mx-4 text-gray-500">OR</span>
             <div className="flex-1 h-px bg-gray-300"></div>
->>>>>>> 7a3e7c4 (third commit)
           </div>
 
           {/* Google Sign-In Button */}

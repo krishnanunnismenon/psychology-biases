@@ -2,14 +2,6 @@
 
 import { auth } from "@/lib/firebase";
 import { createContext, useContext, useEffect, useState, ReactNode } from "react";
-<<<<<<< HEAD
-import { 
-  User, 
-  GoogleAuthProvider, 
-  onAuthStateChanged, 
-  signInWithPopup, 
-  signOut 
-=======
 import {
   User,
   GoogleAuthProvider,
@@ -19,7 +11,6 @@ import {
   createUserWithEmailAndPassword,
   sendEmailVerification,
   signInWithEmailAndPassword,
->>>>>>> 7a3e7c4 (third commit)
 } from "firebase/auth";
 
 const provider = new GoogleAuthProvider();
@@ -28,17 +19,6 @@ type AuthContextType = {
   user: User | null;
   loading: boolean;
   signInWithGoogle: () => Promise<void>;
-<<<<<<< HEAD
-  logout: () => Promise<void>;
-  
-};
-
-export const AuthContext = createContext<AuthContextType | null>(null);
-
-export const useAuth = () => {
-  const context = useContext(AuthContext);
-  if (context === null) {
-=======
   signUpWithEmail: (email: string, password: string) => Promise<void>;
   loginWithEmail: (email: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
@@ -49,17 +29,13 @@ const AuthContext = createContext<AuthContextType | null>(null);
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {
->>>>>>> 7a3e7c4 (third commit)
     console.error("useAuth must be used within an AuthProvider");
     return {
       user: null,
       loading: true,
       signInWithGoogle: async () => {},
-<<<<<<< HEAD
-=======
       signUpWithEmail: async () => {},
       loginWithEmail: async () => {},
->>>>>>> 7a3e7c4 (third commit)
       logout: async () => {},
     };
   }
@@ -85,8 +61,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       setUser(result.user);
     } catch (error) {
       console.error("Google sign-in error:", error);
-<<<<<<< HEAD
-=======
       throw error;
     }
   };
@@ -112,7 +86,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     } catch (error) {
       console.error("Login error:", error);
       throw error;
->>>>>>> 7a3e7c4 (third commit)
     }
   };
 
@@ -122,19 +95,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       setUser(null);
     } catch (error) {
       console.error("Logout error:", error);
-<<<<<<< HEAD
-=======
       throw error;
->>>>>>> 7a3e7c4 (third commit)
     }
   };
 
   return (
-<<<<<<< HEAD
-    <AuthContext.Provider value={{ user, loading, signInWithGoogle, logout }}>
-=======
     <AuthContext.Provider value={{ user, loading, signInWithGoogle, signUpWithEmail, loginWithEmail, logout }}>
->>>>>>> 7a3e7c4 (third commit)
       {children}
     </AuthContext.Provider>
   );

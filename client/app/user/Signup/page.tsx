@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-'use client'
-import { useAuth } from "@/context/AuthContext";
-
-export default function SignupPage() {
-  const { user, signInWithGoogle, logout } = useAuth();
-    return (
-      <div className="flex h-screen">
-        {/* Left Side - Image & Branding */}
-        <div className="w-1/2 relative hidden lg:block">
-          <img
-            src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-            alt="Watch Vault"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute top-8 left-8 text-white text-2xl font-bold">
-            Watch<span className="text-green-500">Vault</span>
-          </div>
-=======
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -61,7 +42,6 @@ export default function SignupPage() {
         />
         <div className="absolute top-8 left-8 text-white text-2xl font-bold">
           Watch<span className="text-green-500">Vault</span>
->>>>>>> 7a3e7c4 (third commit)
         </div>
       </div>
 
@@ -141,20 +121,7 @@ export default function SignupPage() {
             >
               Create Account
             </button>
-<<<<<<< HEAD
-  
-            {/* OR Divider */}
-            <div className="text-center my-4 text-gray-500">OR</div>
-  
-            {/* Google Signup Button */}
-            <button onClick={signInWithGoogle} className="w-full flex items-center justify-center border rounded-md py-2 hover:bg-gray-100">
-              <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" className="w-5 h-5 mr-2" />
-              CONTINUE WITH <span className="font-bold text-red-500 ml-1">Google</span>
-            </button>
-          </div>
-=======
           </form>
->>>>>>> 7a3e7c4 (third commit)
         </div>
       </div>
     </div>
