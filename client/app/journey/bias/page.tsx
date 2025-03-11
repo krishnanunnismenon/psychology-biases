@@ -57,7 +57,7 @@ export default function BiasPage() {
                 Cancel
               </button>
 
-              <Link href="/user/Login">
+              <Link href="/user/login">
                 <button className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">
                   Proceed to Login
                 </button>
