@@ -14,18 +14,18 @@ export default function QuestionPage() {
                     />
                 </div>
                 <div className="grid grid-cols-2 gap-4 mb-4">
-                    <Link href="/journey/Answer">
+                    <Link href="/journey/answer">
                         <button className="w-full border rounded-lg py-2 px-4 text-gray-700 flex items-center justify-center">
                             🐈 "A CAT"
                         </button>
                     </Link>
-                    <Link href="/journey/Answer">
+                    <Link href="/journey/answer">
                         <button className="w-full border rounded-lg py-2 px-4 text-gray-700 flex items-center justify-center">
                             🚗 "A CAR"
                         </button>
                     </Link>
                 </div>
-                 <Link href="/journey/Answer">
+                 <Link href="/journey/answer">
                      <button className="border rounded-lg py-2 px-6 text-gray-700 flex items-center justify-center w-full">
                          🚀 "A SPACESHIP"
                    </button>
